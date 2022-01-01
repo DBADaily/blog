@@ -4,3 +4,5 @@
 
 20220102_1 [三大数据库 sequence 之华山论剑](2022/202201/20220102_1_sequence.md)
 
+20220102_2 [华山论剑之 PostgreSQL sequence](2022/202201/20220102_2_PostgreSQL_sequence.md)
+
