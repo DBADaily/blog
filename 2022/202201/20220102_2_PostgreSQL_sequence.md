@@ -1,3 +1,5 @@
+# 华山论剑之 PostgreSQL sequence
+
 # 前言
 
 本文是 sequence 系列继[三大数据库 sequence 之华山论剑](20220102_1_sequence.md) (Oracle PostgreSQL MySQL sequence 十年经验总结) 之后的第二篇，主要分享一下 PostgreSQL 中关于 sequence 的一些经验。
