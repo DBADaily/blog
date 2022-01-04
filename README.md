@@ -9,3 +9,5 @@
 20220103_1 [[PG Upgrade Series] Extract Epoch Trap](2022/202201/20220103_1_extract.md)
 
 20220104_1 [[PG Upgrade Series] Toast Dump Error](2022/202201/20220104_1_toast_dump_error.md)
+
+20220105_1 [GitLab supports only PostgreSQL now](2022/202201/20220105_1_gitlab_postgresql_only.md)
