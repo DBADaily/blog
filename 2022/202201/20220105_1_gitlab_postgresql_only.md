@@ -1,4 +1,4 @@
-# GitLab supports only PostgreSQL since 2019
+# GitLab supports only PostgreSQL now
 
 Several months ago I worked on migrating packaged PostgreSQL server included with Omnibus GitLab to external PostgreSQL server so that we can deploy HA, PITR backup, monitor system, etc.. 
 
