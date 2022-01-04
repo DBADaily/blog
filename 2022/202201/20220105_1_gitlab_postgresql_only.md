@@ -266,4 +266,4 @@ As a side note – we don't use MySQL ourselves, and not doing so meant we weren
 
 # Conclusion
 
-For GitLab, PostgreSQL is proven to be the right choice. Yet MySQL is still used more widely. You can suggested to continue to use MySQL as long as it meets your requirements and you are not suffering from it as GitLab.
+For GitLab, PostgreSQL is proven to be the right choice. Yet MySQL is still used more widely. You are suggested to continue to use MySQL as long as it meets your requirements and you are not suffering from it as GitLab.
