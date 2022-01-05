@@ -98,7 +98,7 @@ For the database itself, PostgreSQL is a better choice. However, **people might 
 
 2. There are **much more MySQL DBAs available**. 
 
-   Yet **recruiting a decent PostgreSQL DBA** has taken us **five months already** and at least it would take **at least another one month**, i.e. more that **half a year** to get a PostgreSQL DBA! **OMG**!
+   Yet **recruiting a decent PostgreSQL DBA** has taken us **five months already** and at least it would take **at least another one month**, i.e. more than **half a year** to get a PostgreSQL DBA! **OMG**!
 
 3. MySQL teams have got quite a long time to do all the automation tools, yet PostgreSQL DBA might still use the old old-fashioned way. For example,to deploy a simple UPDATE statement, a MySQL developer might only need to fill in necessary information on a web UI, and the SQL will be run **automatically**. However, a PostgreSQL DBA might need to do it manually and there is a chance to produce a **major incident** if not careful enough.
 
