@@ -11,3 +11,5 @@
 20220104_1 [[PG Upgrade Series] Toast Dump Error](2022/202201/20220104_1_toast_dump_error.md)
 
 20220105_1 [GitLab supports only PostgreSQL now](2022/202201/20220105_1_gitlab_postgresql_only.md)
+
+20220106_1 [MySQL or PostgreSQL?](2022/202201/20210106_1_mysql_or_postgresql.md)
