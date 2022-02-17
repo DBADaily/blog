@@ -13,3 +13,8 @@
 20220105_1 [GitLab supports only PostgreSQL now](2022/202201/20220105_1_gitlab_postgresql_only.md)
 
 20220106_1 [MySQL or PostgreSQL?](2022/202201/20210106_1_mysql_or_postgresql.md)
+
+# 202202
+
+20220218_1 [hive_messy_code_issue.md](2022/202202/20220218_1_hive_messy_code_issue.md)
+
