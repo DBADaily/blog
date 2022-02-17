@@ -15,6 +15,7 @@
 20220106_1 [MySQL or PostgreSQL?](2022/202201/20210106_1_mysql_or_postgresql.md)
 
 # 202202
+20220208_1 [ReIndex 失败原因调查](2022/202202/20220208_1_ReIndex_Failed.md)
 
 20220218_1 [PG 数据导入 Hive 乱码问题调查](2022/202202/20220218_1_hive_messy_code_issue.md)
 
