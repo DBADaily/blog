@@ -1,0 +1,97 @@
+# PostGIS 扩展创建失败原因调查
+
+# Issue
+
+升级 PostgreSQL 9.1 的一个集群，由于该集群用到了 PostGIS，在升级 PostgreSQL 时也需要升级一下 PostGIS。PostGIS 相关软件安装好后，在 PostgreSQL 11 中创建 postgis extension 时失败，如下：
+
+```
+alvindb=# CREATE EXTENSION postgis;
+ERROR:  could not load library "/data/pg11/lib/postgresql/postgis-x.x.so": /data/pg11/lib/postgresql/postgis-x.x.so: undefined symbol: GEOSClipByRect
+```
+
+# Investigation
+
+geos 是 PostGIS 的依赖包之一。通过 google 后怀疑是老版本 geos 的问题。
+
+通过如下命令检查，确实是 geos 版本不一致。
+
+```
+# geos-config --version
+3.x
+# rpm -qa|grep geo
+geos-3.y
+```
+
+通过定位 `geos-config` 绝对路径，可以确定 `/usr/local/bin/geos-config`  是旧版本的。
+
+```
+# whereis geos-config
+geos-config: /usr/bin/geos-config /usr/local/bin/geos-config
+# /usr/local/bin/geos-config --version
+3.x
+# /usr/bin/geos-config --version
+3.y
+```
+
+通过 `rpm` 命令，得知旧版本 geos 并不是通过 rpm 命令安装的。
+
+```
+# rpm -q --whatprovides /usr/local/bin/geos-config
+file /usr/local/bin/geos-config is not owned by any package
+# rpm -q --whatprovides /usr/bin/geos-config
+geos-3.y
+```
+
+将旧版本 geos rename 后，
+
+```
+# mv /usr/local/bin/geos-config /usr/local/bin/geos-config-x
+```
+
+重新进入命令行，显示正常版本
+
+```
+# geos-config --version
+3.y
+```
+
+此时再创建 extension，仍然报错：
+
+```
+alvindb=# CREATE EXTENSION postgis;
+ERROR:  could not load library "/data/pg11/lib/postgresql/postgis-x.x.so": /data/pg11/lib/postgresql/postgis-x.x.so: undefined symbol: GEOSClipByRect
+```
+
+# Solution
+
+经过一番周折之后，终于解决了。
+
+在旧版本 geos 的源码目录，通过 `make uninstall` 卸载旧版本。
+
+```
+# cd geos-3.x
+# make uninstall
+...
+ ( cd '/usr/local/include/geos/index/strtree' && rm -f AbstractNode.h AbstractSTRtree.h Boundable.h Interval.h ItemBoundable.h SIRtree.h STRtree.h )
+...
+```
+
+查看新版本的 geos 相关文件，可知，虽然新老版本都安装在不同目录，还是会有影响的。
+
+```
+# rpm -ql geos-3.y|grep AbstractNode.h
+/usr/include/geos/index/strtree/AbstractNode.h
+```
+
+此时再创建 extension，则成功了。
+
+```
+alvindb=# CREATE EXTENSION postgis;
+CREATE EXTENSION
+```
+
+# 总结
+
+生产环境安装软件时，也需要考虑到软件的升级与维护。源码安装会给管理软件带来一定程度的不便。
+
+推荐进行统一配置管理(如 Ansible)，使软件的管理与配置完全自动化。
