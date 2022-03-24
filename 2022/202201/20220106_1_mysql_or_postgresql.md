@@ -20,7 +20,7 @@ Coming to MySQL was like stepping into a parallel universe, where there were lot
 
 Don't get me wrong; I am genuinely proud of the work I have been doing, and **MySQL 8.0 (with its ever-increasing minor version number) is a much better product than 5.7 was**—and it will continue to improve. **But there is only so much you can do**; the changes others and I have been doing take the MySQL optimizer towards a fairly standard early-2000s design with some nice tweaks, but that's also where it ends. (Someone called it “catching up, one decade at a time”, and I'm not sure if it was meant positively or negatively, but I thought a bit of it as a badge of honor.) In the end, there's just not enough resources that I could see it turn into a competitive product, no matter how internal company communications tried to spin that Oracle is filled with geniuses and WE ARE WINNING IN THE CLOUD. And that's probably fine (and again, not really why I quit); **if you're using MySQL and it works for you, sure, go ahead**. But perhaps consider taking a look at the other side of that fence at some point, past the “**OMG vacuum**” memes.
 
-## Blog Here
+(笔者注：OMG vacuum？ Drawback or feature? Refer to [PostgreSQL VACUUM 之深入浅出](20220101_1_vacuum.md))
 
 My new role will be in the Google Chrome team. It was probably about time; my T-shirt collection was getting a bit worn.
 
