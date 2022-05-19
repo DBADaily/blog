@@ -20,3 +20,9 @@
 20220218_1 [PG 数据导入 Hive 乱码问题调查](2022/202202/20220218_1_hive_messy_code_issue.md)
 
 20220225_1 [PostGIS 扩展创建失败原因调查](2022/202202/20220225_1_postgis_upgrade_issue.md)
+
+# 202205
+
+20220506_1 [写了一个简单易用的 shell 框架](https://github.com/dbadaily/easybash)
+
+20220520_1 [pg_dump 的十六般变化](https://github.com/DBADaily/easybash/tree/main/easydump)
