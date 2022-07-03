@@ -26,3 +26,7 @@
 20220506_1 [写了一个简单易用的 shell 框架](https://github.com/dbadaily/easybash)
 
 20220520_1 [pg_dump 的十六般变化](https://github.com/DBADaily/easybash/tree/main/easydump)
+
+# 202207
+
+20220704_1 [PostgreSQL 9.1 飞升之路](2022/202207/20220704_1_postgresql_upgrade.md)
